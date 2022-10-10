@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
-
+        <meta charset="utf-8">
+        <title>Hexacopter Project</title>
+        <link rel="stylesheet" href="css/html5reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico">
     </head>
 
     <body>
         <header>
-
+            <a href='#main' class='skip'>Jump to content</a>
+            <h1>Hexacopter from Scratch</h1>
         </header>
         <nav>
-
+            <ul> 
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='hardware_design.html'>Hardware Design</a></li>
+                <li class='active'><a href='software_design.html'>Software Design</a></li>
+                <li><a href='gallery.html'>Gallery</a></li>
+            </ul>
         </nav>
         <main>
 
-            <p>The "brains" controlling the hexacopter is a Raspberry Pi 4 (rpi) computer.  The rpi must process all the inputs provided by the controller and the sensors: the motion processing unit (MPU), altimeter, and GPS module.  With this information, the rpi must calculate the speed each of the individual motors must spin in order to keep the hexacopter stable and move the in the correct direction.  This task is challenging to accomplish as all this be done in real time, with thousands of micro-adjustments being sent to each of the motors every second.  Generally this is done with a pre-programming off-the-shelf flight controller.  However for this project all of this funcationality is programming manually in Python.</p>
+            <p>The "brains" controlling the hexacopter is a Raspberry Pi 4 (rpi) computer.  The rpi must process all the inputs provided by the contfrfrfroller and the sensors: the motion processing unit (MPU), altimeter, and GPS module.  With this information, the rpi must calculate the speed each of the individual motors must spin in order to keep the hexacopter stable and move the in the correct direction.  This task is challenging to accomplish as all this be done in real time, with thousands of micro-adjustments being sent to each of the motors every second.  Generally this is done with a pre-programming off-the-shelf flight controller.  However for this project all of this funcationality is programming manually in Python.</p>
             <p>The control sequence for the hexacopter takes the following steps (and is shown in the image):</p>
             <ul>
                 <li>rpi receives input from PS2 controller, motion processing unit, alimeter, GPS</li>
