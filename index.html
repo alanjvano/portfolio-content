@@ -2,6 +2,15 @@
 
 <html lang="en">
     <head>
+         <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TMCG49HHX"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8TMCG49HHX');
+        </script>
         <meta charset="utf-8">
         <title>Hexacopter Project</title>
         <link rel="stylesheet" href="css/html5reset.css">
@@ -30,6 +39,23 @@
             <p>This project is still in progress.</p>
 
         </main>
+
+        <form
+        action="https://formspree.io/f/mnqrolgw"
+        method="POST"
+        >
+        <label>
+            Your email:
+            <input type="email" name="email">
+        </label>
+        <label>
+            Your message:
+            <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+        </form>
+
         <footer>
 
         </footer>
