@@ -7,7 +7,7 @@ body {
     margin: auto;
 }
 
-/* @keyframes move_text {
+@keyframes move_text {
     from {transform: translateX(100%); color: red;}
     to {transform: translateX(0px); color: black;}
 }
@@ -16,7 +16,7 @@ body {
     animation-name: move_text;
     animation-duration: 2s;
     animation-timing-function: ease-out;
-} */
+}
 
 @media (prefers-reduced-motion) {
     #move_text {
@@ -84,13 +84,6 @@ img {
     padding: 0px;
 }
 
-/* img:hover {
-    -webkit-transform: scale(1.8);
-    -ms-transform: scale(1.8);
-    transform: scale(1.8);
-    transition: 1s ease;
-} */
-
 header h1 {
     font-size: 50px;
     margin: 10px;
@@ -111,7 +104,6 @@ header h1 {
 .images {
     position: relative;
     display: inline-block;
-    padding: auto;
     margin: auto;
 }
 
