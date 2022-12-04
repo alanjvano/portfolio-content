@@ -126,7 +126,7 @@ header h1 {
 }
 
 .gal_img {
-    width: 400px;
+    width: 300px;
 }
 
 .credit {
@@ -233,6 +233,17 @@ aside {
     form {
         width: 100%;
     }
+
+    .gal_img {
+        width: 200px;
+    }
+
+    .gallery_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+        gap: 10px;
+    }
 }
 
 /* desktop */
@@ -284,5 +295,9 @@ aside {
 
     form {
         width: 100%;
+    }
+
+    .gal_img {
+        width: 300px;
     }
 }    
