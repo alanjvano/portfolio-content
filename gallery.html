@@ -11,7 +11,13 @@
 
         gtag('config', 'G-8TMCG49HHX');
         </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hexacopter Project</title>
         <link rel="stylesheet" href="css/html5reset.css">
         <link rel="stylesheet" href="css/style.css">
@@ -20,32 +26,59 @@
 
     <body>
         <header>
-            <a href='#main' class='skip'>Jump to content</a>
+            <div class="skip"><a href="#main_gallery">Skip to Main Content</a></div>
             <h1>Hexacopter from Scratch</h1>
+            <nav>
+                <ul> 
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='hardware_design.html'>Hardware Design</a></li>
+                    <li><a href='software_design.html'>Software Design</a></li>
+                    <li class='active'><a href='gallery.html'>Gallery</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav>
-            <ul> 
-                <li><a href='index.html'>Home</a></li>
-                <li><a href='hardware_design.html'>Hardware Design</a></li>
-                <li><a href='software_design.html'>Software Design</a></li>
-                <li class='active'><a href='gallery.html'>Gallery</a></li>
-            </ul>
-        </nav>
-        <main>
-            <p>
-                This page has images of all the major components and subsystems used in the hexacoper.  The focus of this project ultimately is functionality rather than asthetics. However, this could benefit from some additional wire management as well as light shielding to protect all the fragile compenents in a crash.
-            </p>
-            <img src="images/battery.jpg" alt="battery on hexacopter">
-            <img src="images/gps_module.jpg" alt="gps module on hexacopter">
-            <img src="images/motor.jpg" alt="individual motor and ESC on hexacopter">
-            <img src="images/mpu_altimeter_led_controller.jpg" alt="mpu, altimeter, and led controller on hexacopter">
-            <img src="images/power_converter.jpg" alt="power converter circuit on hexacopter">
-            <img src="images/ps2_controller.jpg" alt="Playstation 2 controller">
-            <img src="images/raspberry_pi4.jpg" alt="Raspberry Pi 4b">
-            <img src="images/rpi_pwm_controller.jpg" alt="Raspberry Pi and pwm controller on hexacopter">
+        
+        <main id="main_gallery">
+            <div class="gallery_container">
+                <p>
+                    This page has images of all the major components and subsystems used in the hexacoper.  The focus of this project ultimately is functionality rather than asthetics. However, this could benefit from some additional wire management as well as light shielding to protect all the fragile compenents in a crash.
+                </p>
+                <div class="images">
+                    <img class="gal_img" src="images/battery.jpg" alt="battery on hexacopter">
+                    <p>LiPo battery used to power all the electronics</p>
+                </div>
+                <div class="images">
+                    <img class="gal_img" src="images/gps_module.jpg" alt="gps module on hexacopter">
+                    <p>gps module mounted to frame of hexacopter with ziptie</p>
+                </div>
+                <div class="images">
+                    <img class="gal_img" src="images/motor.jpg" alt="individual motor and ESC on hexacopter">
+                    <p>motor with ESC mounted on hexacopter arm</p>
+                </div>
+                <div class="images">
+                    <img class="gal_img" src="images/mpu_altimeter_led_controller.jpg" alt="mpu, altimeter, and led controller on hexacopter">
+                    <p>MPU, altimeter, and led controller boards mounted on top of the frame</p>
+                </div>
+                <div class="images">
+                    <img class="gal_img" src="images/power_converter.jpg" alt="power converter circuit on hexacopter">
+                    <p>power converter generated 3.3v and 5v power for raspberry pi and sensors</p>
+                </div>
+                <div class="images">
+                    <img class="gal_img" src="images/ps2_controller.jpg" alt="Playstation 2 controller">
+                    <p>standard Playstation 2 controller used for controlling hexacopter</p>
+                </div>
+                <div class="images">
+                    <img class="gal_img" src="images/raspberry_pi4.jpg" alt="Raspberry Pi 4b">
+                    <p>Raspberry Pi 4b used to communicate with sensors/controller and control motor speeds</p>
+                </div>
+                <div class="images">
+                    <img class="gal_img" src="images/rpi_pwm_controller.jpg" alt="Raspberry Pi and pwm controller on hexacopter">
+                    <p>Raspberry Pi 4b with PWM controller (created signal for ESCs) under it</p>
+                </div>
+            </div>
         </main>
         <footer>
-
+            <p class="credit">Created by Alan Van Omen.</p>
         </footer>
     </body>
 

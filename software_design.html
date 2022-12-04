@@ -11,45 +11,65 @@
 
         gtag('config', 'G-8TMCG49HHX');
         </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hexacopter Project</title>
         <link rel="stylesheet" href="css/html5reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico">
     </head>
 
-    <body>
+    <body class="split">
         <header>
-            <a href='#main' class='skip'>Jump to content</a>
-            <h1>Hexacopter from Scratch</h1>
+            <div class="skip"><a href="#main_software">Skip to Main Content</a></div>
+                <h1>Hexacopter from Scratch</h1>
+            <nav>
+                <ul> 
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='hardware_design.html'>Hardware Design</a></li>
+                    <li class='active'><a href='software_design.html'>Software Design</a></li>
+                    <li><a href='gallery.html'>Gallery</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav>
-            <ul> 
-                <li><a href='index.html'>Home</a></li>
-                <li><a href='hardware_design.html'>Hardware Design</a></li>
-                <li class='active'><a href='software_design.html'>Software Design</a></li>
-                <li><a href='gallery.html'>Gallery</a></li>
-            </ul>
-        </nav>
-        <main>
+        
+        <main id="main_software">
 
             <p>The "brains" controlling the hexacopter is a Raspberry Pi 4 (rpi) computer.  The rpi must process all the inputs provided by the contfrfrfroller and the sensors: the motion processing unit (MPU), altimeter, and GPS module.  With this information, the rpi must calculate the speed each of the individual motors must spin in order to keep the hexacopter stable and move the in the correct direction.  This task is challenging to accomplish as all this be done in real time, with thousands of micro-adjustments being sent to each of the motors every second.  Generally this is done with a pre-programming off-the-shelf flight controller.  However for this project all of this funcationality is programming manually in Python.</p>
             <p>The control sequence for the hexacopter takes the following steps (and is shown in the image):</p>
-            <ul>
-                <li>rpi receives input from PS2 controller, motion processing unit, alimeter, GPS</li>
-                <li>rpi determines rotor speed for each motor</li>
-                <li>rpi sends control signal to PWM contoller</li>
-                <li>pwm controller converts rotor speed to PWM signal, sends signal to ESC controllers</li>
-                <li>ESC controllers power motors with appropriate speeds</li>
+            <ul class="fa-ul">
+                <li><i class="fa fa-gears"></i>rpi receives input from PS2 controller, motion processing unit, alimeter, GPS</li>
+                <li><i class="fa fa-gears"></i>rpi determines rotor speed for each motor</li>
+                <li><i class="fa fa-gears"></i>rpi sends control signal to PWM contoller</li>
+                <li><i class="fa fa-gears"></i>pwm controller converts rotor speed to PWM signal, sends signal to ESC controllers</li>
+                <li><i class="fa fa-gears"></i>ESC controllers power motors with appropriate speeds</li>
             </ul>
-            <img src="images/control_diagram.jpg" alt="diagram of module connections and control layout" width=432 height=300>
-            <p>The Raspberry Pi is able to send and receive information between all the controllers and sensors using a communication protocal known as I2C. This communication scheme is ideal for this scenario as it requires only two wired connections from the raspberry pi to all the different modules which all the devices can connect to.  The limits the need for additional wires which can clutter the build and add extra weight. </br> 
+            
+            <p>The Raspberry Pi is able to send and receive information between all the controllers and sensors using a communication protocal known as I2C. This communication scheme is ideal for this scenario as it requires only two wired connections from the raspberry pi to all the different modules which all the devices can connect to.  The limits the need for additional wires which can clutter the build and add extra weight.
             The control scheme for the motors is a hexa-x configuration where each motors spins in alternating directions from the adjacent motors.</p>
-            <img src="images/rotor_direction.jpg", alt="diagram of rotor directions" width=525 height=300>
 
         </main>
-        <footer>
+            
+        <aside>
+            <div class="center_image center">
+                <img class="large" src='images/control_diagram.jpg' alt='software control diagram' width=300 height=400>
+                <span class="caption">control diagram for hexacopter software</span>
+            </div>
+            <div class="center_image center">
+                <img class="large" src='images/rotor_direction.jpg' alt='diagram of rotor direction configurations' width=300 height=400>
+                <span class="caption">two different rotor spin configurations (left configuration used for this project)</span>
+            </div>
+        </aside>
 
+        <footer>
+            <p class="credit">Created by Alan Van Omen.</p>
         </footer>
     </body>
 
